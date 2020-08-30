@@ -17,7 +17,11 @@ function Header() {
         
         <div className="header__right">
              <div className="header__info">
-                 <Avatar/>
+                {/* src="https://www.latinheat.com/wp-content/uploads/2013/01/Mario.500.jpg" */}
+                
+                 <Avatar 
+                 
+                 />
                  <h4>Eric Tlaseca - Morales
                       </h4>
              </div>
