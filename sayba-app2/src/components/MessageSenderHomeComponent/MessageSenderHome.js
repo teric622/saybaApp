@@ -5,6 +5,11 @@ import VideocamIcon from '@material-ui/icons/Videocam';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import {useStateValue} from "../../StateProvider";
+import db from "../../firebase";
+import firebase from "firebase";
+
+
+
 
 function MessageSenderHome() {
     const [{user}, dispatch] = useStateValue();
@@ -12,9 +17,28 @@ function MessageSenderHome() {
     const[imageUrl, setImageUrl] = useState("");
 
 // e.preventDefault prevents refresh when user clicks
+// functionality so that user can add post, that way we dont need no hard code and their post will be rendered to their local time regardless of where they are
     const handleSubmit = (e) =>{
         e.preventDefault();
    
+       db.collection ('posts').add({
+        //    hitting db from firestore
+        message:input,
+        // hitting the timestamp
+        timestamp: firebase.firestore.FieldValue.
+        // server timestamp, timestamp of user their local time
+        serverTimestamp(),
+        // Getting users profile from google so when post is made it automatically shows in post
+        profilePic: user.photoURL,
+        // username: The name of the user on google
+        username:user.displayName,
+        // image, this will be what they
+        image: imageUrl,
+ 
+
+       })
+
+
 
     // some clever db stuff
     setInput("");
@@ -26,20 +50,24 @@ function MessageSenderHome() {
             <div className="messageSenderHome__top">
              <Avatar src ={user.photoURL}/>
                 <form>
+               
                     <input 
                     value={input}
                     onChange= {(e) => setInput (e.target.value) }
                     className="messageSenderHome__input"
                     placeholder={`what's on your mind, ${user.displayName}?`}
                     />
-                    {/* <input
-                     value={imageUrl}
-                     onChange= {(e) => setImageUrl (e.target.value) }
-                     placeholder="image URL (optional)"/> */}
-             
-                        <button onClick={handleSubmit} type="submit">
+                     <button onClick={handleSubmit} type="submit">
                             Hidden submit
                         </button>
+                        <br/>
+                        <br/>
+                    <input
+                     value={imageUrl}
+                     onChange= {(e) => setImageUrl (e.target.value) }
+                     placeholder="image URL (optional)"/>
+             
+                        
                       </form>
 
 
@@ -68,6 +96,5 @@ function MessageSenderHome() {
         </div>
     )
 }
-// 320
 
 export default MessageSenderHome

@@ -16,10 +16,10 @@
     padding:15px; 
 }
 
-.messageSenderHome__top > form{
+/* .messageSenderHome__top > form{
     flex:1;
     display: flex;
-}
+} */
 
 
 .messageSenderHome__top > form > input{
@@ -74,4 +74,3 @@ justify-content:space-evenly;
         display: visible;
     }
 }
-

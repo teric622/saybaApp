@@ -16,7 +16,8 @@ function HomePost({profilePic, image, username, timestamp,
             className="post__avatar"/>
              <div className="post__topInfo">
                <h3>{username}</h3>
-                <p>Timestamp...</p>                           
+               {/* Time stamp to show upto date in <p> */}
+    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>                  
              </div>
             </div>
 
