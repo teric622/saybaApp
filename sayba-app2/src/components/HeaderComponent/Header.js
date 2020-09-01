@@ -10,20 +10,19 @@ import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import {Avatar, IconButton} from '@material-ui/core'
 import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
+import {useStateValue} from "../../StateProvider";
 
 function Header() {
+    const [{user}, dispatch] = useStateValue();
     return (
         <div className="header">
         
         <div className="header__right">
              <div className="header__info">
                 {/* src="https://www.latinheat.com/wp-content/uploads/2013/01/Mario.500.jpg" */}
-                
-                 <Avatar 
-                 
-                 />
-                 <h4>Eric Tlaseca - Morales
-                      </h4>
+               
+                 {/* <h4>Eric Tlaseca - Morales
+                      </h4> */}
              </div>
              <IconButton>
                  {/* <AddIcon /> */}
@@ -55,8 +54,10 @@ function Header() {
             < SupervisedUserCircleIcon fontSize="large"/>
             </div> */}
         </div>
-       
-       
+        <Avatar src={user.photoURL}/>
+       <h4>{user.displayName} 
+       </h4> 
+       {/* user.display displays name on header photourl GETS GOOGLE IMAGE USER SIGNED IN WITH */}
         </div>
     )
 }
