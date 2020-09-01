@@ -1,28 +1,20 @@
 import React from 'react';
-import Header from './components/HeaderComponent/Header'
-import './App.css';
-import Feed from './components/FeedComponent/Feed'
-import Login from '../src/components/LoginComponent/Login'
-import {useStateValue} from "../src/StateProvider";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import One from '../src/components/OneComponent/One'
+import Message from '../src/components/MessageComponent/Message'
 
 function App() {
- const [{user}, dispatch] = useStateValue();
+
 
   return (
+    <Router>
     <div className="app">
-      {!user ? (
-      <Login/>
-      ) : (
-        <>  
-       <Header/>
-      <div className="app__body">
-    
-      <Feed/>
-        
-    </div>
-    </>
-      )}
+      <Switch>
+          <Route exact path='/' component={One} />
+          <Route path='/message' component={Message} />
+        </Switch>
       </div>
+    </Router>
 
 
    
