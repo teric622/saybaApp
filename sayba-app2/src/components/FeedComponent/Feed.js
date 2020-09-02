@@ -24,6 +24,7 @@ useEffect(() => {
 
     return (
         <div className="feed">
+            
            <StoryReel/>
            <MessageSenderHome/>
 

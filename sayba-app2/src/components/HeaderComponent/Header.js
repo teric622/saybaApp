@@ -11,6 +11,7 @@ import {Avatar, IconButton} from '@material-ui/core'
 import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import {useStateValue} from "../../StateProvider";
+import {Link} from 'react-router-dom'
 
 function Header() {
     const [{user}, dispatch] = useStateValue();
@@ -31,32 +32,38 @@ function Header() {
         </div>
        
         <div className="header__center">
-          
+          <Link to="home"  className="header__option">
             <div className="header__option">
              <div className="header__option--active">
             <HomeIcon fontSize="large"/>
             </div>
             </div>
-           
+            </Link>
+
+           <Link to="messages"  className="header__option">
             <div className="header__option">
             <ForumIcon fontSize="large"/>
             </div>
-            
+            </Link>
+
+            <Link to="video"  className="header__option">
             <div className="header__option">
             <VideoCallIcon fontSize="large"/>
             </div>
-            
+            </Link>
+            <Link to= "explore"  className="header__option">
             <div className="header__option">
             <ExploreIcon fontSize="large"/>
             </div>
+            </Link>
 {/* 
             <div className="header__option">
             < SupervisedUserCircleIcon fontSize="large"/>
             </div> */}
         </div>
-        <Avatar src={user.photoURL}/>
+        {/* <Avatar src={user.photoURL}/>
        <h4>{user.displayName} 
-       </h4> 
+       </h4>  */}
        {/* user.display displays name on header photourl GETS GOOGLE IMAGE USER SIGNED IN WITH */}
         </div>
     )
