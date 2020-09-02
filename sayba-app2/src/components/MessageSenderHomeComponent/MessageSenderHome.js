@@ -48,14 +48,15 @@ function MessageSenderHome() {
     return (
         <div className="messageSenderHome">
             <div className="messageSenderHome__top">
-             <Avatar src ={user.photoURL}/>
+             {/* <Avatar src ={user.photoURL}/> */}
                 <form>
                
                     <input 
                     value={input}
                     onChange= {(e) => setInput (e.target.value) }
                     className="messageSenderHome__input"
-                    placeholder={`what's on your mind, ${user.displayName}?`}
+                    placeholder={`what's on your mind, ?`}
+                    // ${user.displayName}
                     />
                      <button onClick={handleSubmit} type="submit">
                             Hidden submit

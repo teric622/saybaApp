@@ -1,13 +1,24 @@
 import React from 'react'
-import Header from '../HeaderComponent/Header.js';
+import Header from "../HeaderComponent/Header"
+import './Message.css'
+import Sidebar from './Sidebar'
+
+
+
 function Message() {
     return (
-        <div className="message">
+     
+        <div className="messageh">
+               <Header/>
+<div className="message">
+             
+            <div className="message__body">
+         <Sidebar/>
+          
 
-            <Header/>
-            <h1>
-                I am the message page : )
-            </h1>
+{/* {Chat} */}
+            </div>
+            </div>
         </div>
     )
 }
