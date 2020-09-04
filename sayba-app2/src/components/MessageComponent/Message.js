@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../HeaderComponent/Header"
 import './Message.css'
 import Sidebar from './Sidebar'
-
+import Chat from './Chat';
 
 
 function Message() {
@@ -14,9 +14,7 @@ function Message() {
              
             <div className="message__body">
          <Sidebar/>
-          
-
-{/* {Chat} */}
+          <Chat/>
             </div>
             </div>
         </div>
