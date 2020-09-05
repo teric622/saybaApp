@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import './MessageSenderHome.css'
 import {Avatar,} from '@material-ui/core'
 import VideocamIcon from '@material-ui/icons/Videocam';
@@ -15,6 +15,11 @@ function MessageSenderHome() {
     const [{user}, dispatch] = useStateValue();
     const[input, setInput] = useState();
     const[imageUrl, setImageUrl] = useState("");
+    const [seed, setSeed] = useState('');
+
+    useEffect(() => {
+       setSeed( Math.floor( Math.random() * 5000));
+    }, []);
 
 // e.preventDefault prevents refresh when user clicks
 // functionality so that user can add post, that way we dont need no hard code and their post will be rendered to their local time regardless of where they are
@@ -29,7 +34,6 @@ function MessageSenderHome() {
         // server timestamp, timestamp of user their local time
         serverTimestamp(),
         // Getting users profile from google so when post is made it automatically shows in post
-        profilePic: user.photoURL,
         // username: The name of the user on google
         username:user.displayName,
         // image, this will be what they
@@ -48,7 +52,7 @@ function MessageSenderHome() {
     return (
         <div className="messageSenderHome">
             <div className="messageSenderHome__top">
-             {/* <Avatar src ={user.photoURL}/> */}
+            <Avatar src= {`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
                 <form>
                
                     <input 

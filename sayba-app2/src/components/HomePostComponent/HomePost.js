@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './HomePost.css';
 import {Avatar} from '@material-ui/core'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
@@ -9,10 +9,15 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 // 243 side widget
 function HomePost({profilePic, image, username, timestamp,
      message}) {
+        const [seed, setSeed] = useState('');
+
+        useEffect(() => {
+           setSeed( Math.floor( Math.random() * 5000));
+        }, []);
     return (
         <div className="post">
             <div className="post__top">
-            <Avatar src={profilePic}
+            <Avatar src= {`https://avatars.dicebear.com/api/human/${seed}.svg`}
             className="post__avatar"/>
              <div className="post__topInfo">
                <h3>{username}</h3>

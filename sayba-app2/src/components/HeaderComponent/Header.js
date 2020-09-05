@@ -44,7 +44,7 @@ function Header() {
             <div className="header__option">
             <ForumIcon fontSize="large"/>
             </div>
-            </Link>
+            </Link>     
 
             <Link to="video"  className="header__option">
             <div className="header__option">
