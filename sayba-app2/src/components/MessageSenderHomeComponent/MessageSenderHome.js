@@ -30,11 +30,11 @@ function MessageSenderHome() {
         //    hitting db from firestore
         message:input,
         // hitting the timestamp
-        timestamp: firebase.firestore.FieldValue.
-        // server timestamp, timestamp of user their local time
-        serverTimestamp(),
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+         // server timestamp, timestamp of user their local time
         // Getting users profile from google so when post is made it automatically shows in post
         // username: The name of the user on google
+        // ? needed bug and error after being inactive and trying to make a post poped up
         username:user.displayName,
         // image, this will be what they
         image: imageUrl,
