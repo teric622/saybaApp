@@ -11,15 +11,21 @@ function Chat() {
     const [seed, setSeed] = useState("");
     const {roomId} = useParams();
     const [roomName, setRoomName] = useState("");
-
-
+const[messages, setMessages] =useState ([]);
+// Just needed a ? lmao 
 useEffect(() => {
-if (roomId) {
-    db.collection('rooms').doc(roomId).onSnapshot(snapshot => (
-        setRoomName(snapshot.data().name)
-    ))
+if (roomId)  {    
+ db.collection('rooms').doc(roomId).onSnapshot((snapshot) => 
+        setRoomName(snapshot.data()?.name));
+
+        db.collection("rooms").doc(roomId)
+        .collection("messages").orderBy
+        ("timestamp", "asc").onSnapshot((snapshot) => 
+    setMessages(snapshot.docs.map((doc) => doc.data () ))
+        );
 }
-}, [roomId])
+},
+ [roomId]);
 
 
     useEffect(()=>{
@@ -29,7 +35,9 @@ if (roomId) {
     const sendMessage = (e) => {
  e.preventDefault();
  console.log('You typed >>>', input);
- 
+ db.collection('rooms').doc(roomId).collection ('messages').add()
+
+
  setInput("");
     };
     return (
@@ -46,15 +54,17 @@ if (roomId) {
           <div className="chat__body">
          {/* need algorithm to integrat if its the user that signed in, then this will 
          be true and will have messages of prple color */}
+         {messages.map(message=> (
+         
           <p className={`chat__message ${true && 'chat__reciever'}`}>
-          <span className="chat__name">Sonny Sangna</span>
-              Hey Guys
+          <span className="chat__name">{message.name}</span>
+              {message.message}
               <span
               className="chat__timestamp">
-                  3:52pm
+                  {new Date(message.timestamp?.toDate()).toUTCString()}
               </span>
           </p>
-          
+         ))}
           </div>
 
           <div className="chat__footer">

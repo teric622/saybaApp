@@ -6,6 +6,7 @@ import Messaging from './components/MessagingComponent/Messaging'
 import Video from '../src/components/VideoComponent/Video'
 import Explore from '../src/components/ExploreComponent/Explore'
 import Home from './components/HomeComponent/Home';
+import Msging from './components/MessagingComponent/Msging'
 
 function App() {
 
@@ -15,9 +16,9 @@ function App() {
     <div className="app">
       <Switch>
           <Route exact path='/' component={One} />
-          <Route path='/rooms/:roomId' component={Messaging} />
-          
-          <Route path='/home' component={Home} />
+          <Route path='/rooms/:roomId/' component={Messaging} />
+        
+          <Route path='/rooms/home' component={Home} />
           <Route exact path='/video' component={Video} />
           <Route exact path='/explore' component={Explore} />
         </Switch>

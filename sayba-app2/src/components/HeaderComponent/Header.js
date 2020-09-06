@@ -33,7 +33,7 @@ function Header() {
         </div>
        
         <div className="header__center">
-          <Link to="home"  className="header__option">
+          <Link to="/home"  className="header__option">
             <div className="header__option">
              <div className="header__option--active">
             <HomeIcon fontSize="large"/>
@@ -45,7 +45,7 @@ function Header() {
             <div className="header__option">
             <ForumIcon fontSize="large"/>
             </div>
-            </Link>     
+            </Link>      
 
             <Link to="video"  className="header__option">
             <div className="header__option">
