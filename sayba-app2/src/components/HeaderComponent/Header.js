@@ -9,6 +9,7 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import {Avatar, IconButton} from '@material-ui/core'
 import AddIcon from '@material-ui/icons/Add';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 import ForumIcon from '@material-ui/icons/Forum';
 import {useStateValue} from "../../StateProvider";
 import {Link} from 'react-router-dom'
@@ -53,7 +54,7 @@ function Header() {
             </Link>
             <Link to= "explore"  className="header__option">
             <div className="header__option">
-            <ExploreIcon fontSize="large"/>
+            <AssignmentIcon fontSize="large"/>
             </div>
             </Link>
 {/* 

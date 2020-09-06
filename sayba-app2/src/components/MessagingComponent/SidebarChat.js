@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './SidebarChat.css'
 import {Avatar} from '@material-ui/core';
+import db from '../../firebase';
 // This page will carry the list of the groups in the sidebar
 function SidebarChat({id, name ,addNewChat}) {
 const [seed, setSeed]= useState('');
@@ -11,10 +12,13 @@ const [seed, setSeed]= useState('');
      }, []);
 // a pop up should show up for the user once they click "+ Room"
      const createChat = () => {
-         const roomName = prompt("Please enter name for chat");
+         const roomName = prompt("Please enter name for chat room " );
 // if the user enters something in the roomname
          if (roomName){
         //  some clever database stuff
+        db.collection('rooms').add({
+           name: roomName,
+        });
      }
      };
 
