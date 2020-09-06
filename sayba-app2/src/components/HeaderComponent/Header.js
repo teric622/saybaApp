@@ -41,7 +41,7 @@ function Header() {
             </div>
             </Link>
 
-           <Link to="messages"  className="header__option">
+           <Link to="/rooms/:roomId"  className="header__option">
             <div className="header__option">
             <ForumIcon fontSize="large"/>
             </div>
