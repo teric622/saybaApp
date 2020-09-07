@@ -31,8 +31,8 @@ function Sidebar() {
         <div className = "sidebar__search"> 
         <div
          className="sidebar__searchContainer">
-      <SearchIcon/>
-       <input placeholder="Search" type="text"/>  
+      {/* <SearchIcon/> */}
+       {/* <input placeholder="Search" type="text"/>   */}
          </div>
         </div>
         

@@ -1,6 +1,6 @@
 .messageSenderHome{
     display: flex;
-    margin-top: 30px;
+    margin-top: -10px;
     flex-direction:column;
     background-color: white;
     border-radius: 15px;
@@ -8,6 +8,7 @@
     width:100%;
     /* height:150px; */
     margin-right: auto;
+    margin-bottom: 10%;
 }
 
 .messageSenderHome__top{
@@ -15,11 +16,11 @@
     border-bottom: 1px solid #eff2f5;
     padding:15px; 
 }
-
-/* .messageSenderHome__top > form{
+ 
+ /* .messageSenderHome__top > form{
     flex:1;
     display: flex;
-} */
+}  */
 
 
 .messageSenderHome__top > form > input{
@@ -31,7 +32,7 @@ border-radius:20px;
 background-color:#eff2f5;
 margin-bottom: 5%;
 height:2em;
-width:150px;
+width:100%;
 margin-right: -40px;
 display: flex;
 justify-content:space-evenly;

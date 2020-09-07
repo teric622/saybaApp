@@ -13,6 +13,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import ForumIcon from '@material-ui/icons/Forum';
 import {useStateValue} from "../../StateProvider";
 import {Link} from 'react-router-dom'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Header() {
     const [{user}, dispatch] = useStateValue();
@@ -35,7 +36,7 @@ function Header() {
         <div className="header__center">
           <Link to="/:roomId/home"  className="header__option">
             <div className="header__option">
-             <div className="header__option--active">
+             <div className="header__option">
             <HomeIcon fontSize="large"/>
             </div>
             </div>
@@ -57,6 +58,8 @@ function Header() {
             <AssignmentIcon fontSize="large"/>
             </div>
             </Link>
+
+    
 {/* 
             <div className="header__option">
             < SupervisedUserCircleIcon fontSize="large"/>

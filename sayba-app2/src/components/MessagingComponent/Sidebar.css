@@ -20,16 +20,15 @@
     min-width: 10vw;
 }   */
 
-.sidebar__search{
+/* .sidebar__search{
     display:flex;
     align-items: center;
     background-color:white;
     /* background-color: #f6f6f6f6; */
-    height:39px;
+    /* height:39px;
     padding: 10px;
     border-bottom:3px solid #f6f6f6;
-  
-}
+} */ 
 /* .sidebar__search:hover {
     background-color: #ebebeb
     
@@ -39,16 +38,16 @@
     color:gray;
 }
 
-
+/* 
 .sidebar__searchContainer {
     display:flex;
     align-items:center;
-    background-color:white;
+    background-color:yellow;
     width:100%;
     height:35px;
     border-radius:20px;
  
-}
+} */
 
 .sidebar__searchContainer > input {
     border:none;
