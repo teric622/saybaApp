@@ -4,7 +4,7 @@ import One from '../src/components/OneComponent/One'
 import Messaging from './components/MessagingComponent/Messaging'
 
 import Video from '../src/components/VideoComponent/Video'
-import Explore from '../src/components/ExploreComponent/Explore'
+import Explore from './components/TaskComponent/Task'
 import Home from './components/HomeComponent/Home';
 import Msging from './components/MessagingComponent/Msging'
 

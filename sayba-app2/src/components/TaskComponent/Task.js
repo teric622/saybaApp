@@ -1,13 +1,19 @@
 import React from 'react'
 import Header from '../HeaderComponent/Header'
-function Explore() {
+
+
+// component for the task feature of the app
+
+
+
+function Task() {
     return (
         
         <div>
             <Header/>
-            <h1>I am the explore page</h1>
+            <h1>weonfij iwhjeb faaaaaaaaaallll</h1>
         </div>
     )
 }
 
-export default Explore
+export default Task
