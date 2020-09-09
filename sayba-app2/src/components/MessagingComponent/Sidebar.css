@@ -38,8 +38,8 @@
     color:gray;
 }
 
-/* 
-.sidebar__searchContainer {
+
+/* .sidebar__searchContainer {
     display:flex;
     align-items:center;
     background-color:yellow;
@@ -56,7 +56,8 @@
 }
 
 .sidebar__chats{
-    background-color: white;
+    background-color:  #ace0f9 ;
     flex:1;
     overflow:scroll;
 }
+

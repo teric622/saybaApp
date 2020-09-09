@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../HeaderComponent/Header'
-
+import TSideBar from './TSideBar'
 
 // component for the task feature of the app
 
@@ -8,10 +8,12 @@ import Header from '../HeaderComponent/Header'
 
 function Task() {
     return (
-        
-        <div>
-            <Header/>
-            <h1>weonfij iwhjeb faaaaaaaaaallll</h1>
+        <div className="dsdlsld">
+               <Header/>
+        <div className="task">
+         < TSideBar/>
+           
+        </div>
         </div>
     )
 }

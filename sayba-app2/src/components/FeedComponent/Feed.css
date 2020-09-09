@@ -8,7 +8,7 @@
     animation: ani 5s infinite linear;
     /* background-size: 300%;
     background-image: linear-gradient(135deg, #cc208e 0%, #6713d2 100%); */
-  background-color:  #D3D3D3;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     /* background: #C9CCD3; */
  /* background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
  background-blend-mode: lighten; */
