@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../HeaderComponent/Header'
-import TSideBar from './TSideBar'
+import TSideBar from './layout/TSideBar'
 
 // component for the task feature of the app
 
