@@ -53,7 +53,7 @@ function Header() {
             <VideoCallIcon fontSize="large"/>
             </div>
             </Link>
-            <Link to= "/:roomId/explore"  className="header__option">
+            <Link to= "/:roomId/balance"  className="header__option">
             <div className="header__option">
             <AssignmentIcon fontSize="large"/>
             </div>
