@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../HeaderComponent/Header';
-
+import Content from '../BalanceComponent/layout/Content'
 
 
 function Balance() {
     return (
         <div>
             <Header/>
-           <h1>I am the balance keeper</h1> 
+        <Content/>
         </div>
     ) 
 }
