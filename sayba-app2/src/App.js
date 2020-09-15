@@ -4,7 +4,7 @@ import One from '../src/components/OneComponent/One'
 import Messaging from './components/MessagingComponent/Messaging'
 
 import Video from '../src/components/VideoComponent/Video'
-import Balance from '../src/components/BalanceComponent/Balance'
+import Manager from '../src/components/ManagerComponent/Manager'
 
 
 import Home from './components/HomeComponent/Home';
@@ -22,7 +22,7 @@ function App() {
         
           <Route path='/:roomId/home' component={Home} />
           <Route exact path='/:roomId/video' component={Video} />
-          <Route exact path='/:roomId/balance' component={Balance} />
+          <Route exact path='/:roomId/balance' component={Manager} />
         </Switch>
       </div>
     </Router>
