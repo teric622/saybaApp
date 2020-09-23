@@ -9,19 +9,19 @@ import '../Manager.scss';
 
 
 export const Sidebar = () =>
- <div className="sidebar">
+ <div className="sidebart">
      <ul className="sidebar__generic">
-         <li>
+         <li className="inbox">
          <span><InboxIcon/></span>
         <span>Inbox</span>
         </li>
 
-         <li>  
+         <li className ="today">  
        <span><TodayIcon/></span>
         <span>Today</span>
         </li>
 
-         <li>  
+         <li className="next_7">  
         <span><DateRangeIcon/></span>
         <span>Next 7 days</span>
         </li>

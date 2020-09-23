@@ -8,6 +8,13 @@ $generic-box-shadow: rgba(0,0,0,0.1) 0px 0px 0px 1px, rgba(0,0,0,0.1) 0px 4px 11
 $generic-border: 1px solid #f1f1f1;
 $generic-bg: #db4c3f;
 
+// html{
+//     box-sizing: border-box;
+//     background-color: #db4c3f;
+// }
+
+
+
 @mixin box-overlay() {
     box-shadow: $generic-box-shadow;
     position: absolute;
@@ -37,3 +44,214 @@ $generic-bg: #db4c3f;
     -ms-user-select:none;
     user-select:none;
 }
+
+@mixin btn($width) {
+
+width: $width;
+background-color: #fff !important;
+border: 1px solid transparent;
+margin-right: 5px;
+margin-top: 10px;
+font-weight: bold;
+font-size: 13px !important;
+line-height: 17px;
+padding: 6px 12px 7px 12px;
+position:relative;
+display: inline-block;
+white-space:nowrap;
+border-radius: 2px !important;
+text-decoration: none !important;
+text-align: center;
+cursor: pointer;
+}
+
+
+@mixin cancel(){
+    color:#555;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 2px 5px;
+}
+
+
+@mixin task-item(){
+    list-style-type:none;
+    display:flex;
+    line-height: 18px;
+    color: #333;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    list-style-type:none;
+    border-bottom: 1px solid #f0f0f0;
+    padding-left: 10px;
+    cursor: pointer;
+
+
+
+&:hover{
+    background-color:#f9f9f9;
+}
+}
+
+@mixin mq($from){
+    @media(max-width: $from){
+        @content;
+    }
+}
+
+// p, li {
+//     color:white;
+// }
+
+.sidebart{
+    @include no-select();
+
+    height: calc(100vh);
+    padding-top: 74px;
+    position: fixed;
+    overlay-x: hidden;
+    overlay-y: hidden;
+    border-right:$generic-border;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+
+// @include mq('900px'){
+//     display:none;
+// }
+
+
+li{
+    padding-left: 10px;
+    padding-right:15px;
+    &:hover .sidebar__project-delete{
+        display:block;
+    }
+}
+
+&__project{
+    padding: 5px 0;
+    cursor: pointer;
+}
+&-delete{
+    margin-left: auto;
+    display: none;
+}
+// once user clicks sidebar background changes
+&.active, &:hover{
+    font-weight: bold;
+    background-color: #fafafa;
+}
+// }
+&:nth-child(1){
+    .sidebar__dot{
+        color:#6accbc;
+    }
+}
+
+&:nth-child(2){
+    .sidebar__dot{
+        color: #fad002;
+    }
+}
+
+
+&:nth-child(3){
+    .sidebar__dot{
+        color:#6accbc;
+    }
+}
+
+&:nth-child(4){
+    .sidebar__dot{
+        color: #ff9932;
+    }
+}
+
+
+&:nth-child(5){
+    .sidebar__dot{
+        color: #af38eb;
+    }
+}
+
+&__projects{
+    padding-left: 3px;
+}
+
+&__project{
+    @include va('left');
+}
+
+&__dot{
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+&__middle{
+    margin-top:20px;
+    margin-bottom: 20px;
+    display:flex;
+    border-bottom: $generic-border;
+    padding-left:10px;
+    cursor: pointer;
+}
+
+span{
+      color: #0000008a;
+      margin-right: 10px;
+
+
+
+      svg.hidden-projects{
+          transform: rotate(-90deg);
+      }
+}
+
+h2{
+    margin:0;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+&__generic{
+    li{
+        padding:0 10px 10px;
+        list-style-type: none;
+        color: #333;
+        display:flex;
+        cursor: pointer;
+        line-height: 1.50;
+        font-size: 30px;
+
+
+        span:first-of-type{
+            margin-right: 10px;
+
+            svg{
+                width:18px;
+                height:18px;
+                color:#555;
+            }
+        }
+    }
+}
+
+}
+
+
+// .darkmode{
+//     header{
+//         -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+//         box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+//         background-color: #282828;
+//         border-color:transparent;
+//     }
+// }
+// 1:22
+// Finally got it to the db!1111
