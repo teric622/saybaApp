@@ -1,16 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TodayIcon from '@material-ui/icons/Today';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import InboxIcon from '@material-ui/icons/Inbox';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import '../Manager.scss';
+import { useSelectedProjectValue } from '../context/context';
+import {Projects} from '../Projects';
+import { AddProject } from '../AddProject';
 
 
 
+export const Sidebar = () =>{
+    const {setSelectedProject} = useSelectedProjectValue;
+    const [active , setActive] = useState ('inbox');
+    const [showProjects, setShowProjects] = useState (true);
 
-export const Sidebar = () =>
+
+return(
  <div className="sidebart">
-     <ul className="sidebar__generic">
+     <ul className="sidebart__generic">
          <li className="inbox">
          <span><InboxIcon/></span>
         <span>Inbox</span>
@@ -27,14 +35,17 @@ export const Sidebar = () =>
         </li>
      </ul>
 
-     <div className="sidebar__middle">
+     <div className="sidebart__middle">
          <span> <ArrowDropDownIcon/></span>
          <h2>Projects</h2>
      </div>
 
 
-<ul className="sidebar__projects">
-    Projects will be here
+<ul className="sidebart__projects">
+   {showProjects && <Projects /> }
+
+{showProjects && <AddProject/>}
 </ul>
-Add project component here!
 </div>
+);
+};
