@@ -17,7 +17,7 @@ $generic-bg: #db4c3f;
 
 @mixin box-overlay() {
     box-shadow: $generic-box-shadow;
-    position: absolute;
+    // position: absolute;
     width: 100%;
     z-index: 1;
     top:85px;
@@ -108,16 +108,15 @@ cursor: pointer;
     @include no-select();
 
     height: calc(100vh);
-    padding-top: 74px;
+  
     position: fixed;
-    overlay-x: hidden;
-    overlay-y: hidden;
-    border-right:$generic-border;
+    padding-top: 3%;
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
     width: 40%;
-
+    overflow: scroll;
+    
 
 // @include mq('900px'){
 //     display:none;
@@ -275,13 +274,56 @@ h2{
     }
 }
 
+.content{
+    flex: 1 1;
+    background: #C9CCD3;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.tasks{
 
 
+//     width: 656px;
+//     background-color: yellow;
+//     margin-left: 266px;
+//     border-right: $generic-border;
+//     min-height: calc(100vh);
+//     vertical-align: top;
+//   padding-left: 200px;
+//   padding-right: 40px;
+//   padding-top: 80px;
+//   padding-bottom: 84px;
+   
+    // background: #C9CCD3;
+    // background-repeat: repeat;
+    // background-position: center;
+    // overflow: scroll;
+    // height: 100vh;
+    // width:100vw;
+    // margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-direction: column;
+    flex: 1 1;
+    background: #C9CCD3;
+    background-repeat: repeat;
+    background-position: center;
+    overflow: scroll;
+    
+    height: calc(100vh);
+}
 
 
+.projects__name{
+    padding-left: 60%;
+}
 
 
-
+    .project__list{
+        background-color: yellow;
+    }
 
 
 // .project-delete-model{

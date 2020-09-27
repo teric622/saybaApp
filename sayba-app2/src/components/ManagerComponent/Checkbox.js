@@ -1,16 +1,20 @@
-import firebase from '../../firebase';
+import db from '../../firebase'
 import React from 'react';
 
 export const Checkbox = ({ id }) => {
     const archiveTask = () => {
-         firebase
-         .firestore()
-         .collection('tasks')
-         .doc(id)
+        
+
+
+
+
+
+        
+         db.collection('tasks').doc(id)
          .update({
              archived: true,
          });
-    };
+    };    
     return(
         <div className= "checkbox-holder"
         onClick={()=> archiveTask()}>
