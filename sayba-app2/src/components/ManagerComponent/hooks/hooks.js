@@ -15,6 +15,7 @@ export const useTasks = selectedProject => {
       let unsubscribe = 
         db.collection('tasks')
         .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw');
+        
   
       unsubscribe =
         selectedProject && !collatedTasksExist(selectedProject)

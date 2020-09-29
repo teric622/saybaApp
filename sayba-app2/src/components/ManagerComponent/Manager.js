@@ -10,15 +10,18 @@ import { ProjectsProvider, SelectedProjectProvider} from '../../components/Manag
 import './Manager.scss';
 function Manager() {
     return (
-        <SelectedProjectProvider>
+
+
+        <h1>Hi</h1>
+//         <SelectedProjectProvider>
             
-        <ProjectsProvider>
-        <div>
-            <Header/>
-<Content/>
-        </div>
-        </ProjectsProvider>
-        </SelectedProjectProvider>
+//         <ProjectsProvider>
+//         <div>
+//             <Header/>
+// <Content/>
+//         </div>
+//         </ProjectsProvider>
+//         </SelectedProjectProvider>
     )
 }
 

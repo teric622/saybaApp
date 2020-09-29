@@ -3,15 +3,7 @@ import React from 'react';
 
 export const Checkbox = ({ id }) => {
     const archiveTask = () => {
-        
-
-
-
-
-
-        
-         db.collection('tasks').doc(id)
-         .update({
+         db.collection('tasks').doc(id).update({
              archived: true,
          });
     };    

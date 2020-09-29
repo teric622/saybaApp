@@ -4,8 +4,8 @@ import One from '../src/components/OneComponent/One'
 import Messaging from './components/MessagingComponent/Messaging'
 
 import Video from '../src/components/VideoComponent/Video'
-import Manager from '../src/components/ManagerComponent/Manager'
-
+// import Manager from '../src/components/ManagerComponent/Manager'
+import ToDoMboard from '../src/components/ToDoComponent/ToDoMboard'
 
 import Home from './components/HomeComponent/Home';
 // import Msging from './components/MessagingComponent/Msging'
@@ -22,7 +22,7 @@ function App() {
         
           <Route path='/:roomId/home' component={Home} />
           <Route exact path='/:roomId/video' component={Video} />
-          <Route exact path='/:roomId/balance' component={Manager} />
+          <Route exact path='/:roomId/balance' component={ToDoMboard} />
         </Switch>
       </div>
     </Router>

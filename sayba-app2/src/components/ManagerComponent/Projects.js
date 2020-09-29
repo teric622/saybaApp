@@ -11,7 +11,7 @@ export const Projects = ({ activeValue = null }) => {
   
     return (
       projects &&
-      projects.map((project) => (
+      projects.map((project => (
         <li
           key={project.projectId}
           data-testid="project-action-parent"
@@ -42,5 +42,6 @@ export const Projects = ({ activeValue = null }) => {
           </div>
         </li>
       ))
+    )
     );
   };
