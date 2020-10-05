@@ -41,6 +41,8 @@ useEffect (() => {
         }
     };
 
+    
+
     const saveLocalTodos = () => {
         if(localStorage.getItem("todos") ===null){
             localStorage.setItem("todos", JSON.stringify([]));
@@ -63,10 +65,14 @@ useEffect (() => {
         <div className="Twodo__header">
             <Header/>
             </div>
-            <div>
-            <h2>To do</h2>
-            <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>
+            <div className="todobody">
+    <h2 className="todoh2">{`Today's plan`}</h2> 
+          
+        
+        <div className="listtobody">
+            <Form className="formtodo" todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>
             <TwoDoLists setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
+            </div>
         </div>
         </div>
     )

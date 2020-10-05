@@ -1,8 +1,8 @@
 import React from 'react'
 import DoneIcon from '@material-ui/icons/Done';
 import DeleteIcon from '@material-ui/icons/Delete';
-
-
+import CheckRoundedIcon from '@material-ui/icons/CheckRounded';
+import DeleteRoundedIcon from '@material-ui/icons/DeleteRounded';
 
 function TwoDo({text, todo, todos, setTodos}) {
 
@@ -26,11 +26,11 @@ const completeHandler = () =>{
         <div className="todo">
             <li className={`todo-item ${todo.completed ? "completed" : ''}`}>{text}</li>
                  <button  onClick={completeHandler} className="todocomplete__btn">
-                     <DoneIcon/>
+                     <CheckRoundedIcon/>
                  </button>
 
                  <button onClick={deleteHandler} className="tododelete__btn">
-                     <DeleteIcon/>
+                     < DeleteRoundedIcon/>
                  </button>
    
         </div>

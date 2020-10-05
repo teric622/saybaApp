@@ -25,16 +25,16 @@ function Form({setInputText,  inputText, todos, setTodos, setStatus}) {
 
     return (
         <div>
-        <form>
-        <input value={inputText}onChange={inputTextHandler}type="text" className="todo-input" />
+        <form className="add">
+        <input value={inputText}onChange={inputTextHandler}type="text" className="todo-input" placeholder="What's the plan for today" />
         <button onClick={submitTodoHandler}className="todo-button" type="submit">
        <AddBoxIcon/>
         </button>
         <div className="select">
-          <select onChange={statusHandler} name="todos" className="filter-todo">
+          <select onChange={statusHandler} name="todos"  className="filter-todo">
             <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="uncompleted">Uncompleted</option>
+            <option value="completed">Complete</option>
+            <option value="uncompleted">Incomplete</option>
           </select>
         </div>
       </form>
