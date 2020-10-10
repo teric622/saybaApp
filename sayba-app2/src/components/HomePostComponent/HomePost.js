@@ -36,21 +36,21 @@ function HomePost({profilePic, image, username, timestamp,
 
             <div className="post__options">
                 <div className="post__option">
-                <ThumbUpIcon />
-                    <p>Like</p>
+                {/* <ThumbUpIcon />
+                    <p>Like</p> */}
                 </div>
 
                 <div className="post__option">
-                <ChatBubbleOutlineIcon />
-                    <p>Comment</p>
+                {/* <ChatBubbleOutlineIcon />
+                    <p>Comment</p> */}
                 </div>
                 <div className="post__option">
-                <NearMeIcon />
-                    <p>Share</p>
+                {/* <NearMeIcon />
+                    <p>Share</p> */}
                 </div>
                 <div className="post__option">
-               < AccountCircleIcon/>
-              < ExpandMoreIcon/>
+               {/* < AccountCircleIcon/>
+              < ExpandMoreIcon/> */}
                 </div>
             </div>
         </div>

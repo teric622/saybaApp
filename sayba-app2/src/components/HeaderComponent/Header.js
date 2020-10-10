@@ -14,6 +14,7 @@ import ForumIcon from '@material-ui/icons/Forum';
 import {useStateValue} from "../../StateProvider";
 import {Link} from 'react-router-dom'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import HotelIcon from '@material-ui/icons/Hotel';
 
 function Header() {
     const [{user}, dispatch] = useStateValue();
@@ -50,12 +51,13 @@ function Header() {
 
             <Link to="/:roomId/video"  className="header__option">
             <div className="header__option">
-            <VideoCallIcon fontSize="large"/>
+            {/* <VideoCallIcon fontSize="large"/> */}
+            <AssignmentIcon fontSize="large"/>
             </div>
             </Link>
             <Link to= "/:roomId/balance"  className="header__option">
             <div className="header__option">
-            <AssignmentIcon fontSize="large"/>
+            <HotelIcon fontSize="large"/>
             </div>
             </Link>
 

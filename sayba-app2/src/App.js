@@ -5,10 +5,13 @@ import Messaging from './components/MessagingComponent/Messaging'
 
 
 // import Manager from '../src/components/ManagerComponent/Manager'
-import ToDoMboard from '../src/components/ToDoComponent/ToDoMboard'
+
 import TwoDoMotherBoard from '../src/components/TwoDoComponent/TwoDoMotherBoard'
 import Home from './components/HomeComponent/Home';
 // import Msging from './components/MessagingComponent/Msging'
+import Relax from './components/RelaxComponent/Relax';
+
+
 
 function App() {
 
@@ -22,7 +25,7 @@ function App() {
         
           <Route path='/:roomId/home' component={Home} />
           <Route exact path='/:roomId/video' component={TwoDoMotherBoard} />
-          <Route exact path='/:roomId/balance' component={ToDoMboard} />
+          <Route exact path='/:roomId/balance' component={Relax} />
         </Switch>
       </div>
     </Router>

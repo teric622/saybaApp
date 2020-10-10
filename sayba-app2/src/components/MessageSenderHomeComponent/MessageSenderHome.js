@@ -77,7 +77,7 @@ function MessageSenderHome() {
 
 
             </div>
-
+{/* 
 <div className="messageSenderHome__bottom">
 
 <div className="messageSenderHome__option">
@@ -96,7 +96,7 @@ function MessageSenderHome() {
     <h3>Feeling/Activity</h3>
 </div>
 
-</div>
+</div> */}
 
         </div>
     )
