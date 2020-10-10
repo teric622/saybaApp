@@ -3,7 +3,7 @@
   height: 100vh;
 }
 
-.todoh2{
+.todoh2{ 
   padding-left: 32%;
   padding-top: 10%;
 }
@@ -168,7 +168,9 @@ form button {
   justify-content: space-between;
   margin-top: 8%;
   align-items: center;
-  width: auto;
+
+margin-right: 20%;
+width: auto;
 }
 .filter-todo {
   padding: 1rem;
@@ -225,6 +227,7 @@ form button {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  background-color: blanchedalmond;
 }
 select {
   /* color: #ff6f47;

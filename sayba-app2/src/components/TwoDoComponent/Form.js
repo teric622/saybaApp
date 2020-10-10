@@ -1,6 +1,6 @@
 import React from 'react'
 import AddBoxIcon from '@material-ui/icons/AddBox';
-
+import DoneIcon from '@material-ui/icons/Done';
 
 function Form({setInputText,  inputText, todos, setTodos, setStatus}) {
 
@@ -33,8 +33,8 @@ function Form({setInputText,  inputText, todos, setTodos, setStatus}) {
         <div className="select">
           <select onChange={statusHandler} name="todos"  className="filter-todo">
             <option value="all">All</option>
-            <option value="completed">Complete</option>
-            <option value="uncompleted">Incomplete</option>
+    <option value="completed">Done</option>
+            <option value="uncompleted">Left</option>
           </select>
         </div>
       </form>
