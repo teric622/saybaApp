@@ -66,8 +66,9 @@ useEffect (() => {
             <Header/>
             </div>
             <div className="todobody">
+                
     <h2 className="todoh2">{`Today's plan`}</h2> 
-          
+    
         
         <div className="listtobody">
             <Form className="formtodo" todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>

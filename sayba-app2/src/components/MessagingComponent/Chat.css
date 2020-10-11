@@ -61,7 +61,7 @@ font-size:xx-small;
 
 .chat__reciever{
 margin-left:auto;
-background-color:#fff1eb
+background-color:#ace0f9;
 }
 
 .chat__footer{
@@ -69,7 +69,6 @@ background-color:#fff1eb
     align-items: center;
     height: 62px;
     border-top: 1px solid lightgray;
-   
 }
 
 .chat__footer > form {
