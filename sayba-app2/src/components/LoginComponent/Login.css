@@ -11,14 +11,14 @@
 
 .login>button{
     width:300px;
-    background-color:#E12892;
+    background-color:#979295;
     color: #eff2f5;
     font-weight: 800;
 }
 
 .login > button:hover {
     background-color: white;
-    color:#E12892;
+    color:#59bfee;
 }
 
 .login > div > img {
@@ -90,5 +90,6 @@
     }
     to{
         fill: white;
+        text-shadow: 5px 5px black;
     }
 }

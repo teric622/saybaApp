@@ -10,7 +10,7 @@
   display: flex;
   align-content: center;
   padding: 10%;
-  padding-left: 30%;
+  padding-left: 43%;
 }
 
 .listtobody{
@@ -115,7 +115,6 @@ margin-left: 0%;
     rgba(155, 0, 250, 1) 100%
   );
 }
-
 .todo:nth-child(4n + 2) {
   background: linear-gradient(
     90deg,
@@ -123,7 +122,6 @@ margin-left: 0%;
     rgba(250, 0, 135, 1) 100%
   );
 }
-
 .todo:nth-child(4n + 3) {
   background: linear-gradient(
     90deg,
@@ -168,14 +166,13 @@ form button {
 
 .todo {
   margin: 0.5rem;
-  background: white;
+  background: olive;
   font-size: 1.5rem;
   color: black;
   display: flex;
   justify-content: space-between;
   margin-top: 8%;
   align-items: center;
-
 margin-right: 20%;
 width: auto;
 }
@@ -268,3 +265,27 @@ select {
     text-decoration: line-through;
     opacity: 0.5;
   } */
+
+  @media only screen and (max-width: 600px) {
+    .todoh2{ 
+
+      padding-top: 10%;
+      display: flex;
+      align-content: center;
+      padding: 10%;
+      padding-left: 30%;
+    }
+
+    .todo {
+      margin: 0.5rem;
+      background:whitesmoke;
+      font-size: 1.5rem;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8%;
+      align-items: center;
+  margin-left:-5% ;
+    width: 100%;
+    }
+  }

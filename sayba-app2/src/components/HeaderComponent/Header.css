@@ -56,7 +56,7 @@ border-radius:999px;
     border-bottom: 4px solid #8b21f5;
 } */
 .header__option-- :active:hover > .MuiSvgIcon-root{
-    color:  #8b21f5 ;
+    color:  #59bfee ;
 }
 
 
@@ -65,7 +65,7 @@ border-radius:999px;
 }
 
 .header__option:hover > .MuiSvgIcon-root{
-    color:  #8b21f5 ;
+    color:  #59bfee ;
 }
 
 .header__option{

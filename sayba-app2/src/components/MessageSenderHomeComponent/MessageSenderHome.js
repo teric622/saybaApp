@@ -59,7 +59,7 @@ function MessageSenderHome() {
                     value={input}
                     onChange= {(e) => setInput (e.target.value) }
                     className="messageSenderHome__input"
-                    placeholder={`what's on your mind, ?`}
+                    placeholder={`What's on your mind ?`}
                     // ${user.displayName}
                     />
                      <button onClick={handleSubmit} type="submit">
